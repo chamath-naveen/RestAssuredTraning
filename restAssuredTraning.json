@@ -1,0 +1,54 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Dilshan",
+      "location": "Sri Lanka",
+      "phone": "+94 76 523 4231",
+      "courses": [
+        "C#",
+        "Rest API"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Rayan",
+      "location": "Canada",
+      "phone": "+1 647 555 5678",
+      "courses": [
+        "JAVA",
+        "Postman"
+      ]
+    },
+    {
+      "id": "2919",
+      "courses": [
+        "Python",
+        "Project Management"
+      ],
+      "phone": "090 1234 5678",
+      "name": "Sea",
+      "location": "Japan"
+    },
+    {
+      "id": "28c4",
+      "courses": [
+        "Python",
+        "Project Management"
+      ],
+      "phone": "090 1234 5678",
+      "name": "Sea",
+      "location": "Japan"
+    },
+    {
+      "id": "fbf9",
+      "name": "Sea",
+      "location": "Japan",
+      "phone": "090 1234 5678",
+      "courses": [
+        "Python",
+        "Project Management"
+      ]
+    }
+  ]
+}

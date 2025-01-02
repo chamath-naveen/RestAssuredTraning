@@ -1,0 +1,9 @@
+{
+  "name": "Sea",
+  "location": "Japan",
+  "phone": "090 1234 5678",
+  "courses": [
+    "Python",
+    "Project Management"
+  ]
+}
