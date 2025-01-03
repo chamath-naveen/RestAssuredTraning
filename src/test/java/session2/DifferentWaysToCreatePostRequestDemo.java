@@ -11,11 +11,11 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class DifferentWaysToCreatePostRequest {
+public class DifferentWaysToCreatePostRequestDemo {
 
     // Post Request body using Hashmap
     @Test
-    void usingHashMap(){
+    void testUsingHashMap(){
         HashMap studentsData = new HashMap();
 
         studentsData.put("name", "Sea");
@@ -44,7 +44,7 @@ public class DifferentWaysToCreatePostRequest {
 
     // Post Request body using org.json library
     @Test
-    void usingOrgJsonLibrary(){
+    void testUsingOrgJsonLibrary(){
 
         JSONObject studentsData = new JSONObject();
 
@@ -74,7 +74,7 @@ public class DifferentWaysToCreatePostRequest {
 
     // Post Request body using POJO class
     @Test
-    void usingPOJOClass(){
+    void testUsingPOJOClass(){
 
         POJO_PostRequest pojo_postRequest = new POJO_PostRequest();
 
@@ -104,7 +104,7 @@ public class DifferentWaysToCreatePostRequest {
 
     // Post Request body using external json file
     @Test
-    void usingExternalJsonFile(){
+    void testUsingExternalJsonFile(){
 
         try {
             File file = new File(".\\studentsData.json");
@@ -132,26 +132,5 @@ public class DifferentWaysToCreatePostRequest {
         } catch (Exception ex){
             System.out.println(ex);
         }
-    }
-
-
-    // Delete HashMapCreatedData
-    @Test
-    void deleteUsingHashMapCreatedData(){
-        given()
-                .when()
-                    .delete("http://localhost:3000/students/3")
-                .then()
-                    .statusCode(200);
-    }
-
-    @Test
-    void getData() {
-        given()
-                .when()
-                    .get("http://localhost:3000/students")
-                .then()
-                    .statusCode(200)
-                    .log().all();
     }
 }

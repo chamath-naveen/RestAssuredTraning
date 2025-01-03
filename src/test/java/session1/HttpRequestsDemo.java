@@ -7,13 +7,13 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class HttpRequests {
+public class HttpRequestsDemo {
 
     int id;
 
     // GET
     @Test(priority = 0)
-    void getUser(){
+    void testGetUser(){
         given()
                 .when()
                 .get("https://reqres.in/api/users/2")
@@ -24,7 +24,7 @@ public class HttpRequests {
 
     // GET
     @Test(priority = 1)
-    void getUsers() {
+    void testGetUsers() {
         given()
                 .when()
                     .get("https://reqres.in/api/users?page=2")
@@ -36,7 +36,7 @@ public class HttpRequests {
 
     // POST
     @Test(priority = 2)
-    void createUser() {
+    void testCreateUser() {
         HashMap data = new HashMap();
         data.put("name", "Chamath");
         data.put("job", "QA Engineer");
@@ -55,8 +55,8 @@ public class HttpRequests {
     }
 
     // PUT
-    @Test(priority = 3,dependsOnMethods = {"createUser"})
-    void updateUser() {
+    @Test(priority = 3,dependsOnMethods = {"testCreateUser"})
+    void testUpdateUser() {
         HashMap data = new HashMap();
         data.put("name", "Chamath Naveen");
         data.put("job", "Senior QA Engineer");
@@ -72,8 +72,8 @@ public class HttpRequests {
     }
 
     // DELETE
-    @Test(priority = 4, dependsOnMethods = {"updateUser"})
-    void deleteUser() {
+    @Test(priority = 4, dependsOnMethods = {"testUpdateUser"})
+    void testDeleteUser() {
         given()
 
                 .when()
