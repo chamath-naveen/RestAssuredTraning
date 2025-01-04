@@ -5,10 +5,7 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import java.util.Map;
-
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
 
 public class HeadersDemo {
 
